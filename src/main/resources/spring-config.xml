@@ -26,6 +26,8 @@
 
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
         <property name="connectionFactory" ref="connectionFactory"/>
+        <!--对hash结构的操作中会涉及到map等其他类操作，所以需要明确他的规则-->
+        <property name="defaultSerializer" ref="stringRedisSerializer"/>
         <property name="keySerializer" ref="stringRedisSerializer"/>
 <!--        <property name="valueSerializer" ref="jdkSerializationRedisSerializer"/>-->
         <property name="valueSerializer" ref="stringRedisSerializer"/>
