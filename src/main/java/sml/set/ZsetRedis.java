@@ -15,7 +15,7 @@ import java.util.Set;
 /**
  * 有序集合  set集合是无序，这是有序
  */
-public class Zset {
+public class ZsetRedis {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         RedisTemplate redisTemplate = applicationContext.getBean(RedisTemplate.class);
